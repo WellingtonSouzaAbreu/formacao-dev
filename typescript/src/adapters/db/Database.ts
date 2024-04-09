@@ -1,4 +1,4 @@
-import { Collection } from "./Collection"
+import { Collection } from "../../app/ports/Collection"
 
 export class Database implements Collection {
     private static itens: any[] = []

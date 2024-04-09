@@ -1,5 +1,5 @@
-import { Collection } from "./Collection"
-import { CryptoInterface } from "./CryptoInterface"
+import { Collection } from "../ports/Collection"
+import { CryptoInterface } from "../ports/CryptoInterface"
 
 export class RegisterUser {
     constructor(
