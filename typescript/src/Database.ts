@@ -1,4 +1,6 @@
-export class Database {
+import { Collection } from "./Collection"
+
+export class Database implements Collection {
     private static itens: any[] = []
 
     insert(item: any) {

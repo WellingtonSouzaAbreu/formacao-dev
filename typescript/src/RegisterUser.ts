@@ -1,13 +1,15 @@
-import { Criptography } from "./Criptography"
-import { Database } from "./Database"
+import { Collection } from "./Collection"
+import { CryptoInterface } from "./CryptoInterface"
 
 export class RegisterUser {
-    database = new Database()
-    criptography = new Criptography()
+    constructor(
+        private database: Collection,
+        private cryptography: CryptoInterface
+    ) { }
 
     execute(name: string, email: string, password: string) {
 
-        const passwordHash = this.criptography.encrypt(password)
+        const passwordHash = this.cryptography.encrypt(password)
 
         const user = {
             id: Math.random(), // Adicionar novo ID
