@@ -1,9 +1,10 @@
-import { Collection } from "../ports/Collection"
 import { CryptoInterface } from "../ports/CryptoInterface"
+import { UserCollection } from "../ports/UserCollection"
+import { User } from "./Usuario"
 
 export class RegisterUser {
     constructor(
-        private database: Collection,
+        private database: UserCollection,
         private cryptography: CryptoInterface
     ) { }
 
@@ -11,8 +12,8 @@ export class RegisterUser {
 
         const passwordHash = this.cryptography.encrypt(password)
 
-        const user = {
-            id: Math.random(), // Adicionar novo ID
+        const user: User = {
+            id: `${Math.random()}`, // Adicionar novo ID
             name,
             email,
             password: passwordHash
