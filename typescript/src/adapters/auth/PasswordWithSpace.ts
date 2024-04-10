@@ -1,4 +1,4 @@
-import { CryptoInterface } from "../../app/ports/CryptoInterface";
+import { CryptoInterface } from "../../core/ports/CryptoInterface";
 
 export class PasswordWithSpace implements CryptoInterface {
     encrypt(password: string): string {

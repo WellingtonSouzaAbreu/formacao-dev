@@ -8,9 +8,12 @@ export class RegisterUser {
         private cryptography: CryptoInterface
     ) { }
 
-    execute(name: string, email: string, password: string) {
-
+    async execute(name: string, email: string, password: string): Promise<User> {
         const passwordHash = this.cryptography.encrypt(password)
+
+        const userExists = await this.database.findByEmail(email)
+        console.log(userExists)
+        if (userExists) throw new Error('User already exists')
 
         const user: User = {
             id: `${Math.random()}`, // Adicionar novo ID

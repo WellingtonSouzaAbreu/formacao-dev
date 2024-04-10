@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt'
-import { CryptoInterface } from '../../app/ports/CryptoInterface'
+import { CryptoInterface } from '../../core/ports/CryptoInterface'
 
 export class BcryptAdapter implements CryptoInterface {
     encrypt(password: string) {
