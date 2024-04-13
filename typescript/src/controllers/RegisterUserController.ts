@@ -7,12 +7,16 @@ export default class RegisterUserController {
         private registerUser: RegisterUser
     ) {
         server.post('/register', (req, res) => {
-            registerUser.execute(
-                req.body.name,
-                req.body.email,
-                req.body.password
-            )
-            return res.status(201).send()
+            try {
+                registerUser.execute(
+                    req.body.name,
+                    req.body.email,
+                    req.body.password
+                )
+                return res.status(201).send()
+            } catch (error: any) {
+                res.status(400).send()
+            }
         })
     }
 }

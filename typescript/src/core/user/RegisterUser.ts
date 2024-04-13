@@ -1,6 +1,6 @@
 import { CryptoInterface } from "../ports/CryptoInterface"
 import { UserCollection } from "../ports/UserCollection"
-import { User } from "./Usuario"
+import { User } from "./User"
 
 export class RegisterUser {
     constructor(

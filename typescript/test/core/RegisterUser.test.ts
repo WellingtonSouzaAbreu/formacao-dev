@@ -1,10 +1,10 @@
-import { Criptography } from '../src/adapters/auth/Criptography'
-import { CryptoInterface } from '../src/core/ports/CryptoInterface'
-import { UserDatabase } from '../src/adapters/db/UserDatabase'
-import { RegisterUser } from '../src/core/user/RegisterUser'
-import { PasswordWithSpace } from '../src/adapters/auth/PasswordWithSpace'
-import { BcryptAdapter } from '../src/adapters/auth/BcryptAdapter'
-import { UserCollection } from '../src/core/ports/UserCollection'
+import { Criptography } from '../../src/adapters/auth/Criptography'
+import { CryptoInterface } from '../../src/core/ports/CryptoInterface'
+import { UserDatabase } from '../../src/adapters/db/UserDatabase'
+import { RegisterUser } from '../../src/core/user/RegisterUser'
+import { PasswordWithSpace } from '../../src/adapters/auth/PasswordWithSpace'
+import { BcryptAdapter } from '../../src/adapters/auth/BcryptAdapter'
+import { UserCollection } from '../../src/core/ports/UserCollection'
 test('Deve registrar usuário invertendo a senha', async () => {
     const database: UserCollection = new UserDatabase()
     const cryptography: CryptoInterface = new Criptography()

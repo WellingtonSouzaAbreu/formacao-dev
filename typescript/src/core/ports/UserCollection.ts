@@ -1,4 +1,4 @@
-import { User } from "../user/Usuario";
+import { User } from "../user/User";
 
 export interface UserCollection {
     insert(user: User): Promise<void>
